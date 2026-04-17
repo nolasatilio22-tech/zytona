@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zytona</title>
+
+
+<script>      function mostrar(id){
+
+    let secciones = document.getElementsByClassName("seccion");
+    let botones = document.querySelectorAll(".menu button");
+
+    for(let i = 0; i < secciones.length; i++){
+        secciones[i].classList.remove("activa");
+    }
+
+    botones.forEach(b => b.classList.remove("activo"));
+
+    document.getElementById(id).classList.add("activa");
+
+    event.target.classList.add("activo");
+}  </script>
+
+
+
+
+<style>
+
+/* 🌑 BASE */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:black;
+    color:rgb(255, 255, 255);
+}
+
+/* 🧭 BARRA */
+.menu{
+    background:#111;
+    padding:15px;
+    text-align:center;
+    border-bottom:2px solid red;
+    position:sticky;
+    top:0;
+}
+
+.menu .title{
+    font-size:22px;
+    font-weight:bold;
+    color:red;
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
+
+.menu button{
+    margin:5px;
+    padding:10px 15px;
+    background:black;
+    color:white;
+    border:1px solid red;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu button:hover{
+    background:red;
+    color:white;
+}
+
+/* 📄 SECCIONES */
+.seccion{
+    display:none;
+    padding:50px 20px;
+    text-align:center;
+}
+
+.activa{
+    display:block;
+}
+
+/* 🧱 TARJETAS */
+.card{
+    background:#111;
+    padding:20px;
+    margin:15px auto;
+    max-width:600px;
+    border-radius:10px;
+    border:1px solid rgb(255, 0, 0);
+    box-shadow:0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* 🏷️ TITULOS */
+h1,h2{
+    color:red;
+}
+
+p{
+    color:rgb(255, 255, 255);
+}
+
+
+style> .seccion{
+    opacity:0;
+    transform:translateY(10px);
+    transition:0.3s;
+}
+
+.activa{
+    opacity:1;
+    transform:translateY(0);
+}</style>
+
+</style>
+</head>
+
+<body>
+
+
+
+
+
+
+    
+    <div class="hero" id="hero">
+
+    <div class="slider">
+        <div class="slides">
+            <img src="https://images.seeklogo.com/logo-png/30/1/blueprint-logo-png_seeklogo-302582.png">
+            <img src="https://images.seeklogo.com/logo-png/30/1/blueprint-logo-png_seeklogo-302582.png">
+        </div>
+    </div>
+
+    <div class="hero-text">
+        <h1>ZYTONA</h1>
+        <p>Technology • Future • Design</p>
+
+        <button onclick="mostrar('info')">
+            Explorar
+        </button>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 🧭 MENÚ -->
+<div class="menu">
+
+    <div class="title">PROYECTO ZAYTONA</div> 
+
+    <button onclick="mostrar('inicio')">Inicio</button>
+    <button onclick="mostrar('info')">Información</button>
+    <button onclick="mostrar('catalogo')">Catálogo</button>
+    <button onclick="mostrar('contacto')">Contacto</button>
+    <button onclick="mostrar('futuro')">Futuro</button>
+
+</div>
+
+
+<!-- 🏠 INICIO -->
+<div id="inicio" class="seccion activa">
+
+    <h1>Inicio</h1>
+
+   
+   
+   <div class="card">
+    <h2>🚀 Bienvenido a Zytona</h2>
+    <p>
+        Un proyecto de tecnología, diseño y desarrollo digital con visión al futuro.
+    </p>
+</div>
+   
+   
+   
+   
+    <div class="card">
+        <h2>Sobre esta página</h2>
+        <p>
+            Zytona es un proyecto digital enfocado en tecnología,
+            diseño moderno y desarrollo web.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>¿Por qué el nombre?</h2>
+        <p>
+            Representa identidad, creatividad y visión hacia el futuro tecnológico. Ademas el nombre es estilo japones que hace mension a una meta que tengo 
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué ofrece?</h2>
+        <p>
+            Ofrece proyectos, ideas digitales, catálogo y desarrollo de sistemas web.<br> Tambien con una amplia variedad de juego que creare en un futuro que puede ser en 2027 solo puedo decir que seran en 2D Y 3D ademas pienso subirlos a tiendas de juego en ios y android .
+        </p>
+    </div>
+
+<img src="images/zt.jpeg" alt="">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="inicio" class="seccion activa">
+
+    <h1>Inicio de seccion PROXIMAMENTE</h1>
+
+    <!-- LOGIN -->
+    <div id="loginBox" class="card">
+        <h2>Usuario</h2>
+
+        <input id="user" placeholder="Usuario">
+        <input id="pass" type="password" placeholder="Contraseña">
+
+        <button onclick="login()">Entrar</button>
+    </div>
+
+    <!-- PERFIL -->
+    <div id="perfil" class="card" style="display:none;">
+        <h2>👤 Bienvenido</h2>
+        <h3 id="nombreUsuario"></h3>
+    </div>
+
+</div>
+
+
+
+<script> function mostrar(id){
+
+    let secciones = document.getElementsByClassName("seccion");
+
+    for(let i = 0; i < secciones.length; i++){
+        secciones[i].classList.remove("activa");
+    }
+
+    document.getElementById(id).classList.add("activa");
+
+    // 🔥 SOLO mostrar login en inicio
+    if(id !== "inicio"){
+        document.getElementById("loginBox").style.display = "none";
+    } else {
+        // solo si no está logueado
+        if(!localStorage.getItem("user")){
+            document.getElementById("loginBox").style.display = "block";
+        }
+    }
+
+
+function login(){
+
+    let u = document.getElementById("user").value;
+
+    if(u === ""){
+        alert("Escribe usuario");
+        return;
+    }
+
+    localStorage.setItem("user", u);
+
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("perfil").style.display = "block";
+
+    document.getElementById("nombreUsuario").innerText = "Hola, " + u;
+}
+
+
+
+
+
+window.onload = function(){
+
+    let u = localStorage.getItem("user");
+
+    if(u){
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("perfil").style.display = "block";
+        document.getElementById("nombreUsuario").innerText = "Hola, " + u;
+    }
+}
+
+
+
+
+
+
+let u = localStorage.getItem("user");
+if(u){
+    document.getElementById("userNav").innerText = "👤 " + u;
+}
+
+
+
+
+let u = localStorage.getItem("user");
+if(u){
+    document.getElementById("userNav").innerText = "👤 " + u;
+}
+
+
+}</script>
+
+
+
+
+
+
+
+
+<!-- 📄 INFORMACIÓN -->
+<div id="info" class="seccion">
+
+    <h1>Información</h1>
+
+    <div class="card glass">
+        <h2>🚀 Zytona</h2>
+        <p>Proyecto digital enfocado en desarrollo web, diseño moderno y tecnología creativa.</p>
+    </div>
+
+    <div class="card glass">
+        <h2>🎯 Misión</h2>
+        <p>Crear sistemas interactivos y experiencias digitales únicas.</p>
+    </div>
+
+    <div class="card glass">
+        <h2>🧠 Visión</h2>
+        <p>Convertir Zytona en una marca tecnológica reconocida.</p>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- 📦 CATÁLOGO -->
+
+
+<div>  <div id="catalogo" class="seccion">
+
+    <h1>Catálogo 🎮</h1>
+
+    <!-- 🎮 PRODUCTO 1 -->
+    <div class="card">
+        <img src=" https://icm.aexp-static.com/Internet/internationalcardshop/gcp/corporate/es_mx/images/cards/gold.png "  width="150"> 
+        <h2>🚀 Mejoras de juego</h2>
+        <p>Skins, boosts y ventajas digitales.</p>
+        <h3>$10</h3>
+        <button onclick="agregarCarrito('Mejoras de juego',10)">Agregar</button>
+    </div>
+
+    <!-- 🎮 PRODUCTO 2 -->
+    <div class="card">
+        <img src=" https://icm.aexp-static.com/Internet/internationalcardshop/gcp/corporate/es_mx/images/cards/gold.png "  width="150"> 
+        <h2>🔥 Paquete VIP Gamer</h2>
+        <p>Acceso premium a contenido exclusivo.</p>
+        <h3>$15</h3>
+        <button onclick="agregarCarrito('VIP Gamer',15)">Agregar</button>
+    </div>
+
+    <!-- 🎮 PRODUCTO 3 -->
+    <div class="card">
+        <img src="  https://static.vecteezy.com/system/resources/previews/010/966/305/original/diamond-cartoon-icon-free-vector.jpg"  width="150"> 
+        <h2>💎 Pack Diamante</h2>
+        <h2>⚡ Boost de XP</h2>
+        <p>Sube nivel más rápido en juegos compatibles.</p>
+        <h3>$8</h3>
+        <button onclick="agregarCarrito('Boost XP',8)">Agregar</button>
+    </div>
+
+    <!-- 🎮 PRODUCTO 4 -->
+    <div class="card">
+        <img src="  https://static.vecteezy.com/system/resources/previews/010/966/305/original/diamond-cartoon-icon-free-vector.jpg"  width="150"> 
+        <h2>💎 Pack Diamante</h2>
+        <p>Monedas virtuales y recompensas extra.</p>
+        <h3>$12</h3>
+        <button onclick="agregarCarrito('Pack Diamante',12)">Agregar</button>
+    </div>
+
+
+
+    <!-- 🎮 PRODUCTO 5 -->
+    <div class="card">
+        <img src="  https://media.sketchfab.com/models/a827ec37fae04f1d8ebdd625ffa95827/thumbnails/75f727da170841cc93532315e9975a1b/5affd81afee849babb2adc317bc9276c.jpeg"  width="200"> 
+        <h2>🎯 Skins Exclusivas</h2>
+        <p>Diseños únicos para personajes y armas.</p>
+        <h3>$7</h3>
+        <button onclick="agregarCarrito('Skins Exclusivas',7)">Agregar</button>
+    </div>
+
+
+
+    <!-- 🛒 CARRITO -->
+    <div class="card">
+        <h2>🛒 Carrito</h2>
+
+        <div id="listaCarrito"></div>
+
+        <h3 id="total">Total: $0</h3>
+
+        <button onclick="pagarCarrito()">Comprar ahora</button>
+    </div>
+
+</div></div>
+   
+   
+
+
+<style> .badge{
+    background:red;
+    padding:4px 8px;
+    font-size:12px;
+    border-radius:5px;
+}</style>
+   
+   
+   <SCript> 
+  function agregarCarrito(nombre, precio){
+
+document.body.style.transform="scale(0.98)";
+setTimeout(()=>document.body.style.transform="scale(1)",100);
+
+    alert("🛒 Agregado al carrito");
+}
+   
+   <span class="badge">🔥 Popular</span></SCript>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+
+
+
+
+
+    
+
+    
+</div>
+<script>     let carrito = [];
+let total = 0;
+
+function agregarCarrito(nombre, precio){
+
+    carrito.push({nombre, precio});
+    total += precio;
+
+    actualizarCarrito();
+}
+
+function actualizarCarrito(){
+
+    let lista = document.getElementById("listaCarrito");
+
+    lista.innerHTML = "";
+
+    carrito.forEach(item=>{
+        lista.innerHTML += "<p>🎮 " + item.nombre + " - $" + item.precio + "</p>";
+    });
+
+    document.getElementById("total").innerText = "Total: $" + total;
+}
+
+function pagarCarrito(){
+
+    if(carrito.length === 0){
+        alert("El carrito está vacío");
+        return;
+    }
+
+    alert("Compra realizada con éxito 🎉");
+
+    carrito = [];
+    total = 0;
+    actualizarCarrito();
+
+
+
+
+
+
+
+function pagar(){
+
+    let nombre = document.getElementById("nombre").value;
+    let numero = document.getElementById("numero").value;
+    let fecha = document.getElementById("fecha").value;
+    let cvv = document.getElementById("cvv").value;
+
+    if(nombre === "" || numero === "" || fecha === "" || cvv === ""){
+        document.getElementById("estadoPago").innerText = "❌ Llena todos los campos";
+        return;
+    }
+
+    if(numero.length < 16){
+        document.getElementById("estadoPago").innerText = "❌ Tarjeta inválida";
+        return;
+    }
+
+    document.getElementById("estadoPago").innerText = "⏳ Procesando...";
+
+    setTimeout(()=>{
+        document.getElementById("estadoPago").innerText = "✅ gracias por completar la compra  🎉";
+    },2000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}</script>
+
+
+
+
+
+
+
+<!-- 📞 CONTACTO -->
+<div id="contacto" class="seccion">
+
+    <h1>Contacto</h1>
+
+    <div class="card glass">
+        <h2>📧 Correo oficial</h2>
+        <p>zytona.project@gmail.com</p>
+    </div>
+
+    <div class="card glass">
+        <h2>📱 Comunicación</h2>
+        <p>WhatsApp: +503 XXXX XXXX</p>
+    </div>
+
+    <div class="card glass">
+        <h2>📍 Ubicación</h2>
+        <p>El Salvador</p>
+    </div>
+
+    <div class="card glass">
+        <h2>🎨 Identidad visual</h2>
+        <p>Espacio para logo o diseño del proyecto</p>
+
+        <img src="https://via.placeholder.com/700x300"
+             style="width:100%; border-radius:12px; margin-top:10px;">
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 🔮 FUTURO -->
+<div id="futuro" class="seccion">
+
+    <h1>Visión a futuro</h1>
+
+    <div class="card glass">
+        <h2>🎮 Desarrollo de juegos</h2>
+        <p>
+            Creación de juegos 2D y 3D con sistemas interactivos,
+            mecánicas modernas y diseño optimizado para móviles y PC.
+        </p>
+    </div>
+
+    <div class="card glass">
+        <h2>🛒 Ecosistema digital</h2>
+        <p>
+            Plataforma de productos digitales: mejoras de juegos,
+            recursos, contenido y sistemas de compra virtual.
+        </p>
+    </div>
+
+    <div class="card glass">
+        <h2>💻 Expansión tecnológica</h2>
+        <p>
+            Convertir Zytona en una marca tecnológica con proyectos web,
+            aplicaciones y servicios digitales.
+        </p>
+    </div>
+
+    <div class="card glass">
+        <h2>🚀 Meta final</h2>
+        <p>
+            Publicar juegos y proyectos en Android, iOS y web,
+            creando una marca reconocida en el área digital.
+        </p>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>  .card{
+    background:#111;
+    padding:20px;
+    margin:15px auto;
+    max-width:650px;
+    border-radius:14px;
+    border:1px solid #ff0000;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px rgba(255,0,0,0.5);
+}
+
+.glass{
+    background:rgba(20,20,20,0.6);
+    backdrop-filter: blur(10px);
+}</style>
+
+
+
+
+
+
+
+
+<style> .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:15px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:#111;
+    padding:20px;
+    border-radius:15px;
+    border:1px solid red;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px) scale(1.03);
+    box-shadow:0 0 25px red;
+}</styl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ⚡ JS -->
+<script>
+function mostrar(id){
+
+    let secciones = document.getElementsByClassName("seccion");
+
+    for(let i = 0; i < secciones.length; i++){
+        secciones[i].classList.remove("activa");
+    }
+
+    document.getElementById(id).classList.add("activa");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<button onclick="window.scrollTo({top:10, behavior:'smooth'})">
+⬆ Subir
+</button> 
+
+
+
+
+
+
+
+
+
+
+
+<style class="scc">       .card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.02);
+    border-color:white;
+}     </style>
+
+
+
+
+
+
+
+<style class="scc">  < class="scc">     @media (max-width: 600px){
+    .menu button{
+        width:90%;
+        display:block;
+        margin:5px auto;
+    }
+
+    .card{
+        width:90%;
+    }
+}      </style>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<style class="css">       .hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:black;
+}
+
+/* 🔲 CUADRO PRINCIPAL */
+.hero-box{
+    position:relative;
+    width:85%;
+    max-width:1000px;
+    height:500px;
+    border-radius:20px;
+    overflow:hidden;
+    border:2px solid red;
+    box-shadow:0 0 30px rgba(255,0,0,0.3);
+}
+
+/* 🎞️ SLIDER DENTRO DEL CUADRO */
+.slider{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.slides{
+    display:flex;
+    width:300%;
+    height:100%;
+    animation:slide 12s infinite;
+}
+
+.slides img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(45%);
+}
+
+/* movimiento suave */
+@keyframes slide{
+    0%{transform:translateX(0);}
+    33%{transform:translateX(-100%);}
+    66%{transform:translateX(-200%);}
+    100%{transform:translateX(0);}
+}
+
+/* 🧠 TEXTO ENCIMA */
+.hero-text{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:60px;
+    color:red;
+    letter-spacing:8px;
+}
+
+.hero-text p{
+    color:white;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+/* 🔘 BOTÓN */
+.hero-text button{
+    padding:12px 25px;
+    border:1px solid red;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-text button:hover{
+    background:red;
+    color:black;
+    transform:scale(1.1);
+}</style>
+
+
+
+<style>  .card{
+    background:#111;
+    padding:20px;
+    margin:15px auto;
+    max-width:600px;
+    border-radius:15px;
+    border:1px solid red;
+    transition:0.3s;
+}
+
+/* ✨ EFECTO GLASS PRO */
+.glass{
+    background:rgba(17,17,17,0.6);
+    backdrop-filter: blur(10px);
+}
+
+/* 🔥 HOVER PRO */
+.card:hover{
+    transform:translateY(-5px) scale(1.03);
+    box-shadow:0 0 25px red;
+}
+
+/* 🧠 TITULOS */
+h1{
+    color:red;
+    letter-spacing:3px;
+}
+
+h2{
+    color:white;
+}
+
+/* 📄 TEXTO */
+p{
+    opacity:0.85;
+    line-height:1.5;
+}</style>
+
+
+
+
+
+
+<style> .menu{
+    background:#111;
+    padding:15px;
+    text-align:center;
+    border-bottom:2px solid red;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* 🔥 BOTONES ESTABLES */
+.menu button{
+    margin:5px;
+    padding:10px 15px;
+    width:120px;              /* 👈 tamaño fijo */
+    background:black;
+    color:white;
+    border:1px solid red;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.2s;
+    box-sizing:border-box;    /* 👈 evita saltos */
+}
+
+/* ⚡ hover sin mover layout */
+.menu button:hover{
+    background:red;
+    color:black;
+}
+
+/* 🔴 activo sin cambiar tamaño */
+.menu button.activo{
+    background:red;
+    color:black;
+    font-weight:bold;
+}</style>
+
+
+
+
